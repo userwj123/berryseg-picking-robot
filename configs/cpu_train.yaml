@@ -1,0 +1,25 @@
+model: weights/yolo11n-seg.pt
+data: data/processed/db1/dataset.yaml
+device: cpu
+epochs: 30
+imgsz: 640
+batch: 2
+workers: 0
+threads: 4
+project: runs/segment
+name: cpu_train
+seed: 42
+optimizer: AdamW
+lr0: 0.001
+amp: false
+cache: false
+plots: true
+save: true
+patience: 10
+mosaic: 0.0
+mixup: 0.0
+copy_paste: 0.0
+mask_ratio: 2
+overlap_mask: false
+max_det: 500
+

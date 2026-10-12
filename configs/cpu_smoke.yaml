@@ -1,0 +1,31 @@
+# A real short training run to verify data loading, backpropagation, masks and checkpoints.
+model: weights/yolo11n-seg.pt
+data: data/processed/db1/dataset_smoke.yaml
+device: cpu
+epochs: 2
+imgsz: 320
+batch: 2
+workers: 0
+threads: 4
+project: runs/segment
+name: cpu_smoke
+seed: 42
+deterministic: true
+optimizer: AdamW
+lr0: 0.001
+amp: false
+cache: false
+plots: true
+save: true
+patience: 5
+mosaic: 0.0
+mixup: 0.0
+copy_paste: 0.0
+degrees: 0.0
+translate: 0.05
+scale: 0.1
+fliplr: 0.5
+mask_ratio: 2
+overlap_mask: false
+max_det: 500
+

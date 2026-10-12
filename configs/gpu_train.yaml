@@ -1,0 +1,27 @@
+# Requires CUDA-enabled PyTorch; an unavailable GPU raises an explicit error.
+model: weights/yolo11n-seg.pt
+data: data/processed/db1/dataset.yaml
+device: '0'
+epochs: 100
+imgsz: 960
+batch: 4
+workers: 4
+threads: 4
+project: runs/segment
+name: gpu_train
+seed: 42
+optimizer: AdamW
+lr0: 0.001
+amp: true
+cache: false
+plots: true
+save: true
+save_period: 10
+patience: 20
+mosaic: 0.0
+mixup: 0.0
+copy_paste: 0.0
+mask_ratio: 2
+overlap_mask: false
+max_det: 500
+

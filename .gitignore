@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+._*
+
+# Large data files
+bsail_sam.tar.gz
+data/
+runs/
+reports/
+.runtime/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Weights (too large for git, keep local)
+weights/*.pt
+!weights/.gitkeep
+
+# IDE
+.vscode/
+.idea/
